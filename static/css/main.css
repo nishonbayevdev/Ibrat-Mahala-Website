@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar-nav{
+    display: inline-block;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.nav-item a{
+    font-size: 1.05rem;
+}
+.icon-sm-2{
+    font-size: 1.5rem;
+}
+.icon-sm-1{
+    font-size: 1.05rem;
+}
+.when-click-show-content-if-only-md-and{
+    display: none;
+}
+@media (max-width: 991px){
+.when-click-show-content-if-only-md-and{
+    display: block;
+}
+}
+.main-carousel{
+    width: 100%;
+    height: 100vh;
+}
+.carousel-item{
+    width: 100%;
+    height: 100vh;
+}
+.section-wrapper{
+    width: 100%;
+    height: auto;
+    display: block!important;
+}
+.text-align-center{
+    text-align: center;
+}
+.footer-wrapper{
+    background-color: rgba(163, 164, 165, 0.7);
+}
+.nav-footer{
+    width: 100%;
+}
+.nav-item-footer{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.btn-ui{
+    text-align: right;
+}
+.btn-ui{
+    padding: 15px 35px;
+}
+.section-half-wrapper{
+    width: 100%;
+    height: 60vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.owl-next,.owl-prev{
+    border: none!important;
+    outline: none!important;
+    padding: 0!important;
+    font-size: 3rem!important;
+    background-color: #777777!important;
+    opacity: 0.5;
+    height: 45px;
+    width: 50px;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    color: #ffffff!important;
+    transition: 0.2s;
+}
+.owl-next:hover,.owl-prev:hover{
+    background-color: #555454!important;
+  }
+.owl-prev{
+    position: absolute;
+    top: 50%;
+    left: -0;
+}
+.owl-next{
+    position: absolute;
+    top: 50%;
+    right: -0;
+}
+.d-block{
+    display: block;
+}
+.search-inp{
+    border-right-width: 0;
+}
+.btn-search{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.square{
+    width: 100%;
+    height: 300px;
+}
+.card-comment{
+    border: none;
+    border-radius: 7px;
+}
+
+.comments-image{
+    margin: 15px auto;
+    width: 70px;
+    height: 70px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 5px 15px #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comments-image span {
+    font-size: 1.5rem;
+}
+.employer-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 7px;
+}

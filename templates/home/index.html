@@ -1,0 +1,191 @@
+{% extends './base.html' %}
+{% load static %}
+{% block main %}
+  <!-- Carousel start -->
+  <div class="main-carousel">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="text-muted">Another example headline.</h2>
+              <p class="text-light">Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-inverse-info" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="text-muted">Another example headline.</h2>
+              <p class="text-light">Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-inverse-info" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="text-muted">Another example headline.</h2>
+              <p class="text-light">Some representative placeholder content for the second slide of the carousel.</p>
+              <p><a class="btn btn-lg btn-inverse-info" href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- Carousel end  -->
+
+  <!-- Employers carousel start -->
+  <div class="section-wrapper mt-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <h3 class="text-dark mt-3 mb-3">
+            Lorem ipsum dolor sit amet.
+          </h3>
+          <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="owl-carousel owl-carousel-1 owl-theme" style="cursor: pointer;">
+              {% for employe in employes %}
+              <div class="item mt-5 mb-5">
+                <div class="card shadow card-comment">
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                      <img src="{{employe.imgUrl.url}}" alt="" class="img-fluid employer-img" >
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
+                      <div class="">
+                        <h5 class="text-dark mt-1 mb-1 text-align-center">{{employe.fullName}}</h5>
+                      <p class="text-success mt-1 mb-1">{{employe.address}}</p>
+                      <p class="text-muted mt-1 mb-1 text-align-center">
+                        <span >{{employe.level}}</span>
+                        <br>
+                        <span class="text-primary">{{employe.phoneNumber}}</span>
+                      </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Employers carousel end -->
+
+  <!--  Children's number start   -->
+  <section class="section-wrapper bg-light pt-5 pb-5">
+    <div class="container-fluid pt-5 pb-5 mt-5 mb-5">
+      <div class="row justify-content-center align-items-center">
+        {% for age in ages %}
+        <div class="col-lg-2 col-xl-2 col-md-4 col-sm-6  grid-margin stretch-card">
+          <div class="card shadow card-comment">
+            <div class="card-body text-align-center">
+              <h4>{{age.distance}}</h4>
+              <p class="text-muted">Erkaklar : {{age.manCount}}</p>
+              <p class="text-muted">Ayollar :{{age.womenCount}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- Children's number end -->
+
+  <!--  -->
+  <section class="section-wrapper pt-5 pb-5 mt-5">
+      <div class="container">
+        <div class="row">
+          {% for commemplye in commemplyes %}
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+            <div class="card card-comment">
+              <div class="card-head">
+                <img src="{{commemplye.imgUrl}}" alt="" class="img-fluid">
+              </div>
+              <div class="card-body text-align-center">
+                <h4 class="text-muted">{{commemplye.fullName}}</h4>
+                <p class="text-info">{{commemplye.address}}</p>
+                <span class="text-darl">{{commemplye.phoneNumber}}</span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+  </section>
+  <!--  -->
+
+
+  <!--  -->
+  <section class="section-wrapper pt-5 mt-5">
+    <div class="container-fluid vh-100 justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-12">
+          <div class="owl-carousel owl-theme" style="cursor: pointer;">
+            {% for nameOfRoad in nameOfRoads %}
+            <div class="item mt-5">
+              <div class="card shadow card-comment">
+                <div class="card-head text-align-center">
+                  <span class="ti-user icon-lg"></span>
+                </div>
+                <div class="card-body text-align-center">
+                  <p>{{nameOfRoad.bossOfRoad}}</p>
+                  <p>{{nameOfRoad.nameOfRoad}}</p>
+                  <p>{{nameOfRoad.liveAddress}}</p>
+                  <p>{{nameOfRoad.phoneNumber}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--  -->
+  <!--  -->
+  <section class="section-wrapper mb-5  bg-light">
+    <div class="container">
+      <div class="row">
+        {% for main in edit %}
+        <div class="col-12 mt-3 mb-3">
+          <div class="section-1__text">
+            {{main.content|safe}}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock main %}

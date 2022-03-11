@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+{% load static %}
+{% block main %}
+
+<section class="section-wrapper mt-5 mb-5  bg-light">
+    <div class="container mt-5">
+      <div class="row mt-5">
+        {% for main in edit %}
+        <div class="col-12 mt-3 mb-3">
+          <div class="section-1__text">
+            {{main.content|safe}}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
+{% endblock main %}
